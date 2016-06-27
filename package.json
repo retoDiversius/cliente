@@ -1,0 +1,23 @@
+{
+  "name": "clienteDiversius",
+  "version": "1.0.0",
+  "description": "Cliente de reto diversius",
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.4.2",
+    "express": "~3.4.4",
+    "express-flash": "0.0.2",
+    "express-session": "^1.13.0",
+    "http": "0.0.0",
+    "mongoose": "^4.5.1"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "private": true,
+  "main": "server.js"
+}
