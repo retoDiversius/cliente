@@ -26,6 +26,7 @@ app.use(function(req, res, next) {
 var indexCtrl = require('./controllers/index');
 
 app.get('/', indexCtrl.index);
+app.get('/private', indexCtrl.private);
 
 app.use("*", function(req, res) {
   res.send("ko");
