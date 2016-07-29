@@ -2,7 +2,7 @@ $(document).ready(function() {
 	//
 	if ($.cookie('el_cookie') == undefined) {
 		//a login
-		alert("No tienes token");
+		//alert("No tienes token");
 	}else{
 		window.location.replace("http://cliente-diversius-nohtrim.c9users.io/private");
 	}	
@@ -12,6 +12,7 @@ $(document).ready(function() {
 
 	//login de usuarios
 	$('#login').submit(function(event) {
+		console.log("intento de login");
 		event.preventDefault();
 		var data = $(this).serializeArray();
 
@@ -25,15 +26,15 @@ $(document).ready(function() {
 					alert(data.error);
 				} else {
 					token = data.token;
-					alert("token "+token);//enseñamos el token que ha mandado la api y lo guardo en la variable
+					//alert("token "+token);//enseñamos el token que ha mandado la api y lo guardo en la variable
 					$.cookie('el_cookie', token);
 					window.location.replace("http://cliente-diversius-nohtrim.c9users.io/private");
 				}
 			}
 		})
 		.fail(function() {
-			console.log("error");
-		})		
+			console.log("error en el login");
+		});	
 	});
 
 
@@ -43,7 +44,7 @@ $(document).ready(function() {
 		console.log("lalal "+$.cookie('el_cookie'));
 		if ($.cookie('el_cookie') == undefined) {
 			//a login
-			alert("No tienes token");
+			//alert("No tienes token");
 		}else{
 			$.ajax({
 				url: 'https://retodiversius-nohtrim.c9users.io/private',
@@ -54,12 +55,12 @@ $(document).ready(function() {
 					'x-access-token':$.cookie('el_cookie')
 				},
 				success: function (data) {
-					alert(data);//la api me devuelve el _id de usuario que ha decodificado desde el token enviado 
+					//alert(data);//la api me devuelve el _id de usuario que ha decodificado desde el token enviado 
 				}
 			})
 			.fail(function() {
 				console.log("error");
-			})	
+			});	
 		}
 	});
 

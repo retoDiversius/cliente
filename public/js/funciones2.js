@@ -13,7 +13,7 @@ $(document).ready(function() {
 				'x-access-token':$.cookie('el_cookie')
 			},
 			success: function (data) {
-				alert(data);//la api me devuelve el _id de usuario que ha decodificado desde el token enviado 
+				//alert(data);//la api me devuelve el _id de usuario que ha decodificado desde el token enviado 
 			}
 		})
 		.fail(function() {

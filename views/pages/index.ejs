@@ -1,45 +1,48 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Fotos</title>
+	<title>Login</title>
 	<% include ../partials/head %>
 </head>
-<body>
+<body class="hold-transition login-page">
 	<% include ../partials/divAlertas %>
-	<div>
-		<header class="jumbotron">
-	        <!-- Main component for a primary marketing message or call to action -->
-	        <div class="container">
-	            <div class="row row-header">
-	                <h1>Login</h1>
-	            </div>
-	        </div>
-			<div class="container">
-				<form id='login'>
-					<label for="correo">Correo: </label>
-					<input class="form-control" type="text" id="correo" name="correo"/>
-					<br>
-					<label for="password">Password: </label>
-					<input class="form-control" type="text" id="password" name="password"/>
-					<br>
-					<button id="enviar" class="btn btn-primary">Enviar</button>
-				</form>					
-			</div>
-		</header>
-		<!--<header class="jumbotron">
-	        <div class="container">
-	            <div class="row row-header">
-	                <h1>Ir a privado</h1>
-	            </div>
-	        </div>
-	    
 	
-			<div class="container">
-					<button id="privado" class="btn btn-primary">ir</button>				
-			</div>
-		</header>-->		
-	<div>
+	<div class="login-box">
+	  <div class="login-logo">
+	    <a href="#"><b>Reto</b>Diversius</a>
+	  </div>
+	  <!-- /.login-logo -->
+	  <div class="login-box-body">
+	    <p class="login-box-msg">Inicia sesión para entrar</p>
+	
+	    <form id='login' method='get' action='https://retodiversius-nohtrim.c9users.io/private'>
+	      <div class="form-group has-feedback">
+	        <input type="email" class="form-control" placeholder="Email" id="correo" name="correo">
+	        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+	      </div>
+	      <div class="form-group has-feedback">
+	        <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password">
+	        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+	      </div>
+	      <div class="row">
+	        <div class="col-xs-8">
+	        </div>
+	        <!-- /.col -->
+	        <div class="col-xs-4">
+	          <button id="enviar" class="btn btn-primary btn-block btn-flat">Entrar</button>
+	        </div>
+	        <!-- /.col -->
+	      </div>
+	    </form>
+	
+	    <a href="#">Recuperar contraseña</a><br>
+	
+	  </div>
+	  <!-- /.login-box-body -->
+	</div>
+	
 	<% include ../partials/libreriasJs %>
 	<script src="/js/funciones.js"></script>
+	
 </body>
 </html>
